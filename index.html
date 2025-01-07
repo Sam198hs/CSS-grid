@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        body {
+            height: 100vh;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+        .flower-Gallery {
+            width: 90% ;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px; 
+          
+        }
+        .items {
+         background-color:antiquewhite;
+         padding: 10px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         transition: transform 0.5s ease-in-out;
+        }
+
+        .items > img{
+            height: 200px;
+            width: 200px;
+            object-fit: cover;
+            border-radius: 5%;
+        }
+
+        .items:hover{
+            transform: scale(1.1);
+        }
+
+        /* .items.clicked img {
+            transform: scale(2.1);
+        } */
+        
+        @media (max-width: 900px) and (min-width: 600px) {
+            .flower-Gallery {
+            grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 599px) and (min-width: 500px){ 
+            .flower-Gallery {
+            grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 499px){ 
+            .flower-Gallery {
+            grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="flower-Gallery">
+        <div class="items"> <img src="./assets/images/whiteu.avif" alt="flower_image"> </div>
+        <div class="items"> <img src="./assets/images/pic2.avif" alt="flower_image"> </div>
+        <div class="items"> <img src="./assets/images/pic1.jpg" alt="flower_image"> </div>        
+        <div class="items"> <img src="./assets/images/pic3.jpg" alt="flower_image"> </div>
+        <div class="items"> <img src="./assets/images/purple.jpg" alt="flower_image"> </div>
+        <div class="items"> <img src="./assets/images/purple2.jpg" alt="flower_image"> </div>
+        <div class="items"> <img src="./assets/images/pic6.jpg" alt="flower_image"> </div>
+        <div class="items"> <img src="./assets/images/pic7.jpg" alt="flower_image"> </div>
+    </div>
+</body>
+</html>
